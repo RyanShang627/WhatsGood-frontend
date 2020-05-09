@@ -1,6 +1,6 @@
 export default {
-  failed: "Action failed",
-  success: "Action was successful",
+  Nearby: "Nearby",
+  "My Favorites": "My Favorites",
   Profile: "Profile",
   Support: "Support",
   Logout: "Logout"

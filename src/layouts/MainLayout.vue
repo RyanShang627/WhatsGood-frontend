@@ -24,7 +24,7 @@
     >
       <q-scroll-area class="fit">
         <q-list v-for="(menuItem, index) in menuList" :key="index">
-          <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
+          <q-item clickable :active="menuItem.label === $t('Nearby')" v-ripple>
             <q-item-section avatar>
               <q-icon :name="menuItem.icon" />
             </q-item-section>
@@ -54,41 +54,41 @@ export default {
       leftDrawerOpen: false,
       menuList: [
         {
-          icon: "inbox",
-          label: "Inbox",
-          separator: true
-        },
-        {
-          icon: "send",
-          label: "Outbox",
+          icon: "location_on",
+          label: this.$t("Nearby"),
           separator: false
         },
         {
-          icon: "delete",
-          label: "Trash",
+          icon: "favorite",
+          label: this.$t("My Favorites"),
           separator: false
         },
         {
-          icon: "error",
-          label: "Spam",
-          separator: true
-        },
-        {
-          icon: "settings",
-          label: "Settings",
-          separator: false
-        },
-        {
-          icon: "feedback",
-          label: "Send Feedback",
-          separator: false
-        },
-        {
-          icon: "help",
-          iconColor: "primary",
-          label: "Help",
+          icon: "thumb_up",
+          label: this.$t("Recommendation"),
           separator: false
         }
+        // {
+        //   icon: "error",
+        //   label: "Spam",
+        //   separator: true
+        // },
+        // {
+        //   icon: "settings",
+        //   label: "Settings",
+        //   separator: false
+        // },
+        // {
+        //   icon: "feedback",
+        //   label: "Send Feedback",
+        //   separator: false
+        // },
+        // {
+        //   icon: "help",
+        //   iconColor: "primary",
+        //   label: "Help",
+        //   separator: false
+        // }
       ]
     };
   }
